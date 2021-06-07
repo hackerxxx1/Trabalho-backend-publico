@@ -50,11 +50,8 @@ class CursoController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
-    //return await Curso.query().select('id','nome').where('id',params.id).fetch();
-    return await Curso.query()
-                   .with('disciplinas')
-                   .where('id',params.id)
-                   .fetch()
+    return await Curso.query().select('id','nome').with('disciplinas').where('id',params.id).fetch();
+    
   }
 
   /**

@@ -7,9 +7,6 @@ class Horario extends Model {
     static getCampoHorario(){
         return ['hora','dia']
     }
-    turmas(){ 
-        return this.hasMany('App/Models/Turma')                
-    }
     reservas(){
         return this.hasMany('App/Models/Reserva')
     }

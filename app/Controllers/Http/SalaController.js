@@ -50,11 +50,8 @@ class SalaController {
      * @param {View} ctx.view
      */
     async show ({ params, request, response, view }) {
-     // return await Sala.query().select('id','nome','tipo').where('id',params.id).fetch();
-     return await Sala.query()
-     .with('reservas')
-     .where('id',params.id)
-     .fetch();
+     return await Sala.query().select('id','nome','tipo').with('reservas').where('id',params.id).fetch();
+     
     }
   
     /**

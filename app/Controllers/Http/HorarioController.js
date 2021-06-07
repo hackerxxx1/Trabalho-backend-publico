@@ -50,10 +50,8 @@ class HorarioController {
      * @param {View} ctx.view
      */
     async show ({ params, request, response, view }) {
-      return await Horario.query().select('id','hora','dia').where('id',params.id).fetch();
-     //return await Horario.query()
-     //.with('disciplinas')
-     //.first();
+      return await Horario.query().select('id','hora','dia').with('reservas').where('id',params.id).fetch();
+  
     }
   
     /**
