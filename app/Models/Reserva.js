@@ -8,13 +8,13 @@ class Reserva extends Model {
         return ['turma_id','sala_id','horario_id','usuario_id']
     }
    sala(){
-       return this.belongsTo('App/Models/Sala')
+       return this.belongsTo('App/Models/Sala').select('id','nome','tipo')
    }
    horario(){
-      return this.belongsTo('App/Models/Horario')
+      return this.belongsTo('App/Models/Horario').select('id','hora','dia')
    }
    usuario(){
-    return this.belongsTo('App/Models/Usuario')
+    return this.belongsTo('App/Models/Usuario').select('id','nome','codprof')
     }
     
   

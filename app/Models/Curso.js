@@ -8,10 +8,10 @@ class Curso extends Model {
         return ['nome']
     }
     disciplinas(){
-        return this.hasMany('App/Models/Disciplina')
+        return this.hasMany('App/Models/Disciplina').select('id','nome','curso_id')
     }
     turnos(){
-        return this.hasMany('App/Models/Turno') 
+        return this.hasMany('App/Models/Turno').select('id','nome','usuario_id','curso_id') 
     }
 }
 

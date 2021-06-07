@@ -8,10 +8,10 @@ class Turno extends Model {
         return ['nome','usuario_id','curso_id']
     }
     curso(){
-        return this.belongsTo('App/Models/Curso') 
+        return this.belongsTo('App/Models/Curso').select('id','nome') 
     }
     turmas(){
-        return this.hasMany('App/Models/Turma') 
+        return this.hasMany('App/Models/Turma').select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id') 
     }
 }
 
