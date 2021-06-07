@@ -21,7 +21,7 @@ class TurnoController {
    async index ({ request, response, view }) {
     let {page, perPage} = request.all();
     perPage = perPage ? perPage : 10
-    return Turno.query().select('id','nome','id_usuario','id_curso').paginate(page, perPage);
+    return Turno.query().select('id','nome','usuario_id','curso_id').paginate(page, perPage);
   }
 
   /**

@@ -21,7 +21,7 @@ class TurmaController {
     async index ({ request, response, view }) {
     let {page, perPage} = request.all();
     perPage = perPage ? perPage : 10
-    return Turma.query().select('id','codturma','id_usuario','id_disciplina','id_turno','id_horario').paginate(page, perPage);
+    return Turma.query().select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id').paginate(page, perPage);
     }
   
     /**

@@ -21,7 +21,7 @@ class DisciplinaController {
   async index ({ request, response, view }) {
     let {page, perPage} = request.all();
     perPage = perPage ? perPage : 10
-    return Disciplina.query().select('id','nome','id_curso').paginate(page, perPage);
+    return Disciplina.query().select('id','nome','curso_id').paginate(page, perPage);
   }
 
   /**
