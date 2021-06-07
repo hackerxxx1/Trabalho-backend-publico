@@ -6,10 +6,10 @@ class Turma extends ValidatorAbstract{
   get rules () {
     return {
       codturma: 'required|max:40',
-      id_turno: 'required|integer',
-      id_usuario: 'required|integer',
-      id_disciplina: 'required|integer',
-      id_horario: 'required|integer' 
+      turno_id: 'required|integer',
+      usuario_id: 'required|integer',
+      disciplina_id: 'required|integer',
+      horario_id: 'required|integer' 
     }
   }
 }

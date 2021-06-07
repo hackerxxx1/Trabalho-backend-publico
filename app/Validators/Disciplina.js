@@ -6,7 +6,7 @@ class Disciplina extends ValidatorAbstract{
   get rules () {
     return {
       nome: 'required|max:45|min:2',
-      id_curso: 'integer|required'
+      curso_id: 'integer|required'
     }
   }
 }

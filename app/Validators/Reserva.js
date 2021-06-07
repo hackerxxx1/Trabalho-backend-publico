@@ -5,10 +5,10 @@ const ValidatorAbstract = use('App/Validators/ValidatorAbstract')
 class Reserva extends ValidatorAbstract {
   get rules () {
     return {
-      id_turma: 'required|integer',
-      id_sala: 'required|integer',
-      id_horario: 'required|integer',
-      id_usuario: 'required|integer'
+      turma_id: 'required|integer',
+      sala_id: 'required|integer',
+      horario_id: 'required|integer',
+      usuario_id: 'required|integer'
     }
   }
 }
