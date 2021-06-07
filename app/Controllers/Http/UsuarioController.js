@@ -50,10 +50,8 @@ class UsuarioController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
-    return await Usuario.query().select('id','nome','codprof').where('id',params.id).fetch();
-    //return await Usuario.query()
-    //.with('disciplinas')
-    //.first();
+    return await Usuario.query().select('id','nome','codprof').with('reservas').with('turnos').with('turmas').where('id',params.id).fetch();
+    
   }
 
   /**

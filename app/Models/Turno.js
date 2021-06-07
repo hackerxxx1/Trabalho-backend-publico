@@ -7,8 +7,8 @@ class Turno extends Model {
     static getCampoTurno(){
         return ['nome','usuario_id','curso_id']
     }
-    cursos(){
-        return this.hasMany('App/Models/Curso') 
+    curso(){
+        return this.belongsTo('App/Models/Curso') 
     }
     turmas(){
         return this.hasMany('App/Models/Turma') 

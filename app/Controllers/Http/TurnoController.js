@@ -50,10 +50,8 @@ class TurnoController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
-    return await Turno.query().select('id','nome','id_usuario','id_curso').where('id',params.id).fetch();
-    //return await Turno.query()
-    //.with('disciplinas')
-    //.first();
+    return await Turno.query().select('id','nome','usuario_id','curso_id').with('curso').with('turmas').where('id',params.id).fetch();
+    
   }
 
   /**

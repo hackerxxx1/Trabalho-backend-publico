@@ -50,10 +50,8 @@ class TurmaController {
      * @param {View} ctx.view
      */
     async show ({ params, request, response, view }) {
-      return await Turma.query().select('id','codturma','id_usuario','id_disciplina','id_turno','id_horario').where('id',params.id).fetch();
-     //return await Turma.query()
-     //.with('disciplinas')
-     //.first();
+      return await Turma.query().select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id').with('turno').with('horario').with('usuario').with('disciplina').where('id',params.id).fetch();
+    
     }
   
     /**

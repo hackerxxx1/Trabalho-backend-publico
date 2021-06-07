@@ -7,16 +7,16 @@ class Turma extends Model {
     static getCampoTurma(){
         return ['codturma','turno_id','disciplina_id','usuario_id','horario_id']
     }
-    turnos(){
+    turno(){
         return this.belongsTo('App/Models/Turno') 
     }
-    disciplinas(){
+    disciplina(){
         return this.belongsTo('App/Models/Disciplina') 
     }
-    usuarios(){
+    usuario(){
         return this.belongsTo('App/Models/Usuario') 
     }
-    Horarios(){
+    horario(){
         return this.belongsTo('App/Models/Horario') 
     }
 }

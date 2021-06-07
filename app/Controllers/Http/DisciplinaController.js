@@ -50,7 +50,7 @@ class DisciplinaController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
-    return await Disciplina.query().select('id','nome','curso_id').with('cursos').where('id',params.id).fetch();
+    return await Disciplina.query().select('id','nome','curso_id').with('curso').with('turmas').where('id',params.id).fetch();
   
   }
 
