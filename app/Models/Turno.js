@@ -11,7 +11,7 @@ class Turno extends Model {
         return this.belongsTo('App/Models/Curso').select('id','nome') 
     }
     turmas(){
-        return this.hasMany('App/Models/Turma').select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id') 
+        return this.hasMany('App/Models/Turma').select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id').with('turno').with('horario').with('usuario') 
     }
 }
 

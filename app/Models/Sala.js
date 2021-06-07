@@ -8,7 +8,7 @@ class Sala extends Model {
         return ['nome','tipo']
     }
     reservas(){
-        return this.hasMany('App/Models/Reserva') 
+        return this.hasMany('App/Models/Reserva').with('sala').with('horario').with('usuario') 
     }
 }
 

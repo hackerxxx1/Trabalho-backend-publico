@@ -11,13 +11,13 @@ class Turma extends Model {
         return this.belongsTo('App/Models/Turno').select('id','nome','usuario_id','curso_id') 
     }
     disciplina(){
-        return this.belongsTo('App/Models/Disciplina').select('id','nome','curso_id')
+        return this.belongsTo('App/Models/Disciplina').select('id','nome','curso_id').with('curso')
     }
     usuario(){
         return this.belongsTo('App/Models/Usuario').select('id','nome','codprof') 
     }
     horario(){
-        return this.belongsTo('App/Models/Horario') 
+        return this.belongsTo('App/Models/Horario').with('reservas') 
     }
 }
 

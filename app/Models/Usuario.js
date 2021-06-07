@@ -8,10 +8,10 @@ class Usuario extends Model {
         return ['nome', 'codprof']
     }
     reservas(){
-        return this.hasMany('App/Models/Reserva') 
+        return this.hasMany('App/Models/Reserva').with('sala').with('horario').with('usuario') 
     }
     turmas(){
-        return this.hasMany('App/Models/Turma').select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id') 
+        return this.hasMany('App/Models/Turma').select('id','codturma','usuario_id','disciplina_id','turno_id','horario_id').with('turno').with('horario').with('usuario') 
     }
     turnos(){
         return this.hasMany('App/Models/Turno').select('id','nome','usuario_id','curso_id') 
