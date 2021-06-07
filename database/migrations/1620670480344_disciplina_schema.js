@@ -9,7 +9,7 @@ class DisciplinaSchema extends Schema {
       table.increments()
       table.string('nome',45).notNullable()
       table
-        .integer('id_curso')
+        .integer('curso_id')
         .references('id')
         .inTable('cursos')
         .unsigned()

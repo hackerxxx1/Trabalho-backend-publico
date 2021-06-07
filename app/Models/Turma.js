@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Turma extends Model {
     static getCampoTurma(){
-        return ['codturma','id_turno','id_disciplina','id_usuario','id_horario']
+        return ['codturma','turno_id','disciplina_id','usuario_id','horario_id']
     }
     turnos(){
         return this.belongsTo('App/Models/Turno') 

@@ -9,13 +9,13 @@ class TurnoSchema extends Schema {
       table.increments()
       table.string('nome',40)
       table
-        .integer('id_usuario')
+        .integer('usuario_id')
         .references('id')
         .inTable('usuarios')
         .unsigned()
         .notNullable()
       table
-        .integer('id_curso')
+        .integer('curso_id')
         .references('id')
         .inTable('cursos')
         .unsigned()

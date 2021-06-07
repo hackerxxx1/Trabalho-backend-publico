@@ -16,9 +16,9 @@ const turno = use('App/Models/Turno')
 class TurnoSeeder {
   async run () {
     await turno.createMany([
-      {id:1,nome:'matutino',id_usuario:2,id_curso:2},
-      {id:2,nome:'vespertino',id_usuario:2,id_curso:2},
-      {id:3,nome:'noturno',id_usuario:1,id_curso:1}
+      {id:1,nome:'matutino',usuario_id:2,curso_id:2},
+      {id:2,nome:'vespertino',usuario_id:2,curso_id:2},
+      {id:3,nome:'noturno',usuario_id:1,curso_id:1}
     ])
   }
 }

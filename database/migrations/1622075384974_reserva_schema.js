@@ -8,25 +8,25 @@ class ReservaSchema extends Schema {
     this.create('reservas', (table) => {
       table.increments()
       table
-        .integer('id_turma')
+        .integer('turma_id')
         .references('id')
         .inTable('turmas')
         .unsigned()
         .notNullable()
       table
-        .integer('id_sala')
+        .integer('sala_id')
         .references('id')
         .inTable('salas')
         .unsigned()
         .notNullable()
       table
-        .integer('id_horario')
+        .integer('horario_id')
         .references('id')
         .inTable('horarios')
         .unsigned()
         .notNullable()
       table
-        .integer('id_usuario')
+        .integer('usuario_id')
         .references('id')
         .inTable('usuarios')
         .unsigned()

@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Turno extends Model {
     static getCampoTurno(){
-        return ['nome','id_usuario','id_curso']
+        return ['nome','usuario_id','curso_id']
     }
     cursos(){
         return this.hasMany('App/Models/Curso') 

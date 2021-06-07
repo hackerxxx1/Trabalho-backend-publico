@@ -5,20 +5,11 @@ const Model = use('Model')
 
 class Reserva extends Model {
     static getCampoReserva(){
-        return ['id_turma','id_sala','id_horario','id_usuario']
+        return ['turma_id','sala_id','horario_id','usuario_id']
     }
-    turmas(){
-        return this.hasMany('App/Models/Turma') 
-    }
-    horarios(){
-        return this.hasMany('App/Models/Horario') 
-    }
-    salas(){
-        return this.hasMany('App/Models/Sala') 
-    }
-    usuarios(){
-        return this.hasMany('App/Models/Usuario') 
-    }
+   
+    
+  
 }
 
 module.exports = Reserva

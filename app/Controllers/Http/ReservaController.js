@@ -51,9 +51,7 @@ async store ({ request, response }) {
  */
 async show ({ params, request, response, view }) {
   return await Reserva.query().where('id',params.id).fetch();
-  //return await Reserva.query()
-  //.with('disciplinas')
-  //.first();
+  
 }
 
 /**

@@ -16,10 +16,10 @@ const reserva = use('App/Models/Reserva')
 class ReservaSeeder {
   async run () {
     await reserva.createMany([
-      {id:1,id_turma:1,id_sala:6,id_horario:2,id_usuario:2},
-      {id:2,id_turma:2,id_sala:5,id_horario:1,id_usuario:2},
-      {id:3,id_turma:3,id_sala:6,id_horario:3,id_usuario:2},
-      {id:4,id_turma:4,id_sala:5,id_horario:4,id_usuario:2}
+      {id:1,turma_id:1,sala_id:6,horario_id:2,usuario_id:2},
+      {id:2,turma_id:2,sala_id:5,horario_id:1,usuario_id:2},
+      {id:3,turma_id:3,sala_id:6,horario_id:3,usuario_id:2},
+      {id:4,turma_id:4,sala_id:5,horario_id:4,usuario_id:2}
     ])
   }
 }
